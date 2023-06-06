@@ -8,7 +8,8 @@ const SearchBar = (props) => {
     let countries = [];
     props.countries.map((countrie) => {
       let name = countrie.name.common.toLowerCase();
-      name.includes(event.target.value) && countries.push(countrie);
+      name.includes(event.target.value.toLowerCase()) &&
+        countries.push(countrie);
     });
 
     props.setCountriesFilter(countries);
